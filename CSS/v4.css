@@ -1,0 +1,445 @@
+@charset "UTF-8";
+.turn, .battle-log, .battle-log-add, .userlist {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  border: 0;
+  opacity: 1;
+}
+
+.button, button, select, .select, .team, .message, .chat, .switchmenu button {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+body, p, .battle {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+}
+
+.moveselect button, .switchselect button {
+  visibility: hidden;
+  height: 15px;
+}
+
+.movemenu button.type-Fairy small, .movemenu button.type-Electric small, .movemenu button.type-Grass small, .movemenu button.type-Dragon small, .movemenu button.type-Water small, .movemenu button.type-Normal small, .movemenu button.type-Ghost small, .movemenu button.type-Steel small, .movemenu button.type-Dark small, .movemenu button.type-Fire small, .movemenu button.type-Fighting small, .movemenu button.type-Poison small, .movemenu button.type-Rock small, .movemenu button.type-Ground small, .movemenu button.type-Ice small, .movemenu button.type-Flying small, .movemenu button.type-Psychic small, .movemenu button.type-Bug small {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  font-size: 8.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sunweather, .sunnydayweather, .desolateweather {
+  background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/sun-v4-3.gif) no-repeat scroll left top;
+  color: #664411;
+  text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+  background-size: cover;
+}
+
+.rainweather, .raindanceweather, .primordialseaweather {
+  background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/rain-v4-2.gif) scroll left top;
+  background-size: cover;
+  color: #0044BB;
+  text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+}
+
+.sandstormweather {
+  background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/sand-v4.gif) scroll left top;
+  background-size: cover;
+  color: #554433;
+  text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+}
+
+.hailweather {
+  background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/hail-v4_5.gif) scroll left top;
+  background-size: cover;
+  color: #114455;
+  text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+}
+
+.weather.electricterrainweather, .weather.mistyterrainweather, .weather.grassyterrainweather, .weather.psychicterrainweather {
+  background-size: cover;
+  opacity: 1;
+}
+
+body {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+}
+
+p {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+#tooltipwrapper .tooltip {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.weather.electricterrainweather {
+  background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/terrain-electric2.png) scroll left top;
+  background-size: cover;
+  opacity: 1;
+}
+
+.weather.mistyterrainweather {
+  background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/terrain-mist4.png) scroll left top;
+  background-size: cover;
+  opacity: 1;
+}
+
+.weather.grassyterrainweather {
+  background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/terrain-grassy.png) scroll left top;
+  background-size: cover;
+  opacity: 1;
+}
+
+.weather.psychicterrainweather {
+  background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/terrain-psychic.png) scroll left top;
+  background-size: cover;
+  opacity: 1;
+}
+
+.weather em {
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0px 0px 4px black;
+}
+
+.leftbar {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  background: none;
+  border: none;
+  color: #fff;
+  text-shadow: 0px 0px 4px black;
+  z-index: 2;
+  position: absolute !important;
+  top: 173px !important;
+  left: 10 !important;
+  height: 95px !important;
+  width: 320px !important;
+}
+
+.leftbar .trainer strong {
+  position: relative !important;
+  top: 305px;
+  left: 5px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.leftbar .trainer .teamicons {
+  float: left !important;
+  position: relative !important;
+  top: 0px !important;
+  right: 0px !important;
+  left: -30px;
+  opacity: 1 !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(1) {
+  position: relative !important;
+  top: 0px !important;
+  left: 38px !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(2) {
+  position: relative !important;
+  top: 35px !important;
+  left: 5px !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(3) {
+  position: relative !important;
+  top: 70px !important;
+  left: -27px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(1) {
+  position: relative !important;
+  top: 105px !important;
+  left: -60px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(2) {
+  position: relative !important;
+  top: 140px !important;
+  left: -92px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(3) {
+  position: relative !important;
+  top: 175px !important;
+  left: -124px !important;
+}
+
+.leftbar .trainersprite {
+  filter: blur(0.4px);
+  position: relative !important;
+  left: -20px;
+}
+
+.rightbar {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  background: none;
+  border: none;
+  color: #fff;
+  text-shadow: 0px 0px 4px black;
+  z-index: 2;
+  position: absolute !important;
+  top: 278px !important;
+  right: -90px !important;
+  height: 95px !important;
+  width: 320px !important;
+}
+
+.rightbar .trainer {
+  margin-top: 50px;
+}
+
+.rightbar .trainer strong {
+  font-weight: 500;
+  position: relative !important;
+  top: 329px;
+  right: 95px;
+  text-align: right;
+}
+
+.rightbar .trainer .teamicons {
+  float: left !important;
+  position: relative !important;
+  top: 20px !important;
+  right: 0px !important;
+  opacity: 1 !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(1) {
+  position: relative !important;
+  top: 5px !important;
+  left: 167px !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(2) {
+  position: relative !important;
+  top: 40px !important;
+  left: 134px !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(3) {
+  position: relative !important;
+  top: 75px !important;
+  left: 102px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(1) {
+  position: relative !important;
+  top: 110px !important;
+  left: 69px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(2) {
+  position: relative !important;
+  top: 145px !important;
+  left: 37px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(3) {
+  position: relative !important;
+  top: 180px !important;
+  left: 5px !important;
+}
+
+.rightbar .trainersprite {
+  filter: blur(0.4px);
+  position: relative !important;
+  left: -20px;
+  top: 30px;
+}
+
+.rightbar .trainersprite::after {
+  content: attr(title);
+  position: relative;
+  bottom: 30px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 100%;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.trainer div.teamicons {
+  width: 97px;
+  height: 30px;
+  left: 25px;
+}
+
+.picon {
+  z-index: 2;
+}
+
+.battle-history {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  padding-top: 2px;
+}
+
+.battle-history + h2.battle-history {
+  border: 0px;
+}
+
+.battle-history + .battle-history small::before {
+  content: "⇾ ";
+  font-weight: bold;
+}
+
+.battle-history small:hover {
+  color: #5264bd;
+  letter-spacing: 0.3px;
+}
+
+.spacer.battle-history {
+  border-top: 2px solid rgba(171, 183, 183, 0.2);
+}
+
+.spacer.battle-history + .battle-history small::before {
+  content: "☀ ";
+  font-weight: bold;
+  color: #5264bd;
+}
+
+.spacer.battle-history + .battle-history small {
+  font-weight: bold;
+  color: #5264bd;
+}
+
+.spacer.battle-history + h2.battle-history::before {
+  content: "⇌ ";
+  opacity: 0.2;
+}
+
+h2.battle-history {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  border-bottom: none;
+  padding: 10px;
+  margin-top: -7px;
+  margin-bottom: -8px;
+}
+
+h2.battle-history + .chat {
+  margin-top: 15px;
+}
+
+h2.battle-history + .spacer.battle-history {
+  border: 0px;
+}
+
+h2.battle-history + .chat.message-error {
+  margin-top: 15px;
+}
+
+.movemenu {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.movemenu button {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.movemenu label {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #777;
+  text-transform: uppercase;
+  margin-top: -10px;
+  padding-bottom: 0.7%;
+}
+
+.movemenu label:hover {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#777, #fb4864);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #fb4864;
+  padding-bottom: 0.7%;
+}
+
+.movemenu button:disabled small {
+  font-family: Trebuchet MS, Verdana, sans-serif;
+  letter-spacing: 0.3px;
+  font-size: 8.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.statbar {
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+
+.statbar strong {
+  letter-spacing: 0.3px;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0px 0px 4px black;
+}
+
+.statbar strong small {
+  letter-spacing: 0.3px;
+  font-weight: 300;
+}
+
+.statbar .hpbar .hptext {
+  letter-spacing: 0.3px;
+  font-weight: 700;
+}
+
+.backdrop:after {
+  content: url(http://pedrojmiranda.com/img2/rotate.php);
+}
+
+.battle {
+  border: 0;
+}
+
+.tabbar a.button i.text + span {
+  margin-right: 2px;
+  margin-left: 8px;
+}
+
+.turn {
+  font-weight: 700;
+}
+
+.weather em {
+  font-size: 14px;
+}
+
+abbr[title] {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.chat.message-error {
+  color: #bd5252;
+}
+
+.chat.message-error:nth-child(odd) {
+  font-weight: bold;
+}
+
+.chat.message-error::before {
+  content: "⧗  ";
+  color: #bd5252;
+}

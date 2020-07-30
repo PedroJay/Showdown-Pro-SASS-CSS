@@ -1,0 +1,542 @@
+/// MAIN PAGE TEXT BOXED DIVS 
+$divs-main: ('turn','battle-log','battle-log-add','userlist','battle-log-add',);
+
+/// MAIN PAGE TEXT BOXED DIVS 
+$divs-force: ('.button','button', 'select','.select', '.team', '.message','.chat','.switchmenu button',);
+$divs-nospace: ('body', 'p', '.battle',);
+
+/// HIDE AND PAD
+$hide-pad: ('moveselect button', 'switchselect  button,');
+
+/// TYPING STUFF
+$typings: ('Fairy','Electric','Grass','Dragon','Water','Normal','Ghost','Steel','Dark','Fire','Fighting','Poison','Rock','Ground','Ice','Flying','Psychic','Bug',);
+
+/// WEATHER STUFF
+$sunny: ('sunweather', 'sunnydayweather', 'desolateweather',);
+$rainy: ('rainweather', 'raindanceweather', 'primordialseaweather',);
+$sandy: ('sandstormweather',);
+$haily: ('hailweather',);
+
+// TERRAINS 
+$terrains: ('electric','misty','grassy','psychic');
+
+/// FONT STYLES
+$font-stack-main: (Trebuchet MS, Verdana, sans-serif);
+$font-spacing-main: (0.3px);
+$font-small-size: (8.5px);
+$font-small-style: (uppercase);
+$font-thin-weight: (300);
+$font-normal-weight: (500);
+$font-semibld-weight: (700);
+
+/// FONT COLORS
+$grey: #777;
+$white: #fff;
+$color-highlight-main: #5264bd;
+$color-urgent: #bd5252;
+
+/// FONT-EFFECTS
+$opacity-main: 1;
+$dropshadow-main: 0px 0px 4px rgba(0,0,0, $opacity-main);
+
+%font-main-w0border {
+    font-family: $font-stack-main;
+    letter-spacing: $font-spacing-main;
+    border: 0;
+    opacity: 1;
+}
+
+%font-main-wspace {
+    font-family: $font-stack-main;
+    letter-spacing: $font-spacing-main;
+}
+
+%font-main {
+    font-family: $font-stack-main;
+}
+
+%hide-pad {
+    visibility: hidden;
+    height: 15px;
+}
+
+%style-movetypings {
+    font-family: $font-stack-main;
+    letter-spacing: $font-spacing-main;
+    font-size: $font-small-size;
+    text-transform: $font-small-style;
+    font-weight: $font-normal-weight;
+}
+
+%sunny-defaults {
+    background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/sun-v4-3.gif) no-repeat scroll left top;
+    color: #664411;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+    background-size:cover;
+}
+
+%rainy-defaults {
+    background:url(http://pedrojmiranda.com/wp-content/uploads/2020/05/rain-v4-2.gif) scroll left top;
+    background-size:cover;
+    color: #0044BB;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+}
+
+%sandy-defaults {
+    background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/sand-v4.gif) scroll left top;
+    background-size:cover;
+    color: #554433;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+}
+
+
+%haily-defaults {
+    background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/hail-v4_5.gif) scroll left top;
+    background-size:cover;
+    color: #114455;
+    text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0;
+}
+
+
+%terrain-defaults {
+    background-size: cover;
+    opacity: 1
+}
+
+/// MAIN TEXT & FORCED TEXT
+
+@each $div in $divs-main {
+    .#{$div} {
+        @extend %font-main-w0border
+    }
+}
+
+@each $div in $divs-force {
+    #{$div} {
+        @extend %font-main-wspace
+    }
+}
+
+@each $div in $divs-nospace {
+    #{$div} {
+        @extend %font-main
+    }
+}
+
+/// HIDE
+
+@each $div in $hide-pad {
+    .#{$div} {
+        @extend %hide-pad
+    }
+}
+
+/// TYPINGS
+
+@each $typing in $typings {
+    .movemenu button.type-#{$typing} small {
+        @extend %style-movetypings;
+    }
+}
+
+/// WEATHER
+
+@each $weather in $sunny {
+    .#{$weather} {
+        @extend %sunny-defaults;
+    }
+}
+
+@each $weather in $rainy {
+    .#{$weather} {
+        @extend %rainy-defaults;
+    }
+}
+
+@each $weather in $sandy {
+    .#{$weather} {
+        @extend %sandy-defaults;
+    }
+}
+
+@each $weather in $haily {
+    .#{$weather} {
+        @extend %haily-defaults;
+    }
+}
+
+/// TERRAIN
+
+@each $terrain in $terrains {
+    .weather.#{$terrain}terrainweather {
+        @extend %terrain-defaults;
+    }
+}
+
+/// GLOBALS 
+
+body {
+    font-family: $font-stack-main;
+}
+
+
+p {
+    font-family: $font-stack-main;
+    letter-spacing: $font-spacing-main;  
+}
+
+#tooltipwrapper .tooltip {
+    font-family: $font-stack-main;
+    letter-spacing: $font-spacing-main;
+    border: 1px solid #e3e3e3;
+    background: rgba(255,255,255, 0.95);
+}
+
+
+/// WEATHER & TERRAINS
+
+.weather.electricterrainweather {
+    background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/terrain-electric2.png) scroll left top;
+    background-size:cover;
+    opacity: 1;
+}
+
+.weather.mistyterrainweather {
+    background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/terrain-mist4.png) scroll left top;
+    background-size:cover;
+    opacity: 1;
+}
+
+.weather.grassyterrainweather {
+    background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/terrain-grassy.png) scroll left top;
+    background-size:cover;
+    opacity: 1;
+}
+
+.weather.psychicterrainweather {
+    background: url(http://pedrojmiranda.com/wp-content/uploads/2020/05/terrain-psychic.png) scroll left top;
+    background-size:cover;
+    opacity: 1;
+}
+
+.weather em {
+    color: $white;
+    font-weight: $font-normal-weight;
+    text-shadow: 0px 0px 4px rgba(0,0,0, 1);
+}
+
+/// LEFT AND RIGHT BOXES FOR TRAINER SPRITE/MON ICONS/TRAINER NAME
+.leftbar {
+    font-family: $font-stack-main;
+    letter-spacing: $font-spacing-main;
+    background: none;
+    border: none;
+    color: $white;
+    text-shadow: $dropshadow-main;
+    z-index: 2;
+    position: absolute !important;
+    top: 173px !important;
+    left: 10 !important;
+    height: 95px !important;
+    width: 320px !important;
+    .trainer strong {
+        position: relative !important;
+        top: 305px;
+        left: 5px;
+        font-weight: $font-normal-weight;
+        text-align: left;
+    }
+    .trainer .teamicons {
+        float: left !important;
+        position: relative !important;
+        top: 0px !important;
+        right: 0px !important;
+        left: -30px;
+        opacity: 1 !important;
+    }
+    .teamicons:nth-of-type(2)  span:nth-of-type(1) {
+        position: relative !important;
+        top: 0px !important;
+        left: 38px !important;
+    }
+    .teamicons:nth-of-type(2)  span:nth-of-type(2) {
+        position: relative !important;
+        top: 35px !important;
+        left: 5px !important;
+    }
+    .teamicons:nth-of-type(2)  span:nth-of-type(3) {
+        position: relative !important;
+        top: 70px !important;
+        left: -27px !important;
+    }
+    .teamicons:nth-of-type(3) span:nth-of-type(1) {
+        position: relative !important;
+        top: 105px !important;
+        left: -60px !important;
+    }
+    .teamicons:nth-of-type(3) span:nth-of-type(2) {
+        position: relative !important;
+        top: 140px !important;
+        left: -92px !important;
+    }
+    .teamicons:nth-of-type(3) span:nth-of-type(3) {
+        position: relative !important;
+        top: 175px !important;
+        left: -124px !important;
+    }
+    .trainersprite  {
+        filter: blur(0.4px);
+        position: relative !important;
+        left: -20px;
+    }
+}
+
+.rightbar {
+    font-family: $font-stack-main;
+    letter-spacing: $font-spacing-main;
+    background: none;
+    border: none;
+    color: $white;
+    text-shadow: $dropshadow-main;
+    z-index: 2;
+    position: absolute !important;
+    top: 278px !important;
+    right: -90px !important;
+    height: 95px !important;
+    width: 320px !important;
+    .trainer {
+        margin-top: 50px;
+    }
+    .trainer strong {
+        font-weight: $font-normal-weight;
+        position: relative !important;
+        top: 329px;
+        right: 95px;
+        text-align: right;
+    }
+    .trainer .teamicons {
+        float: left !important;
+        position: relative !important;
+        top: 20px !important;
+        right: 0px !important;
+        opacity: 1 !important;
+    }
+    .teamicons:nth-of-type(2)  span:nth-of-type(1) {
+        position: relative !important;
+        top: 5px !important;
+        left: 167px !important;
+    }    
+    .teamicons:nth-of-type(2)  span:nth-of-type(2) {
+        position: relative !important;
+        top: 40px !important;
+        left: 134px !important;
+    }  
+    .teamicons:nth-of-type(2)  span:nth-of-type(3) {
+        position: relative !important;
+        top: 75px !important;
+        left: 102px !important;
+    } 
+    .teamicons:nth-of-type(3) span:nth-of-type(1) {
+        position: relative !important;
+        top: 110px !important;
+        left: 69px !important;
+    } 
+    .teamicons:nth-of-type(3) span:nth-of-type(2) {
+        position: relative !important;
+        top: 145px !important;
+        left: 37px !important;
+    }
+    .teamicons:nth-of-type(3) span:nth-of-type(3) {
+        position: relative !important;
+        top: 180px !important;
+        left: 5px !important;
+    }
+    .trainersprite {
+        filter: blur(0.4px);
+        position: relative !important;
+        left: -20px;
+        top: 30px;
+    }
+    .trainersprite::after {
+        content: attr(title);
+        position: relative;
+        bottom: 30px;
+        left: 20px;
+        font-size: 11px;
+        opacity: 100%;
+        font-weight: bold;
+        background: rgba(0,0,0, 0.4);
+        border-radius: 5px;
+        padding: 3px;
+    }
+}
+
+
+.trainer div.teamicons {
+    width: 97px;
+    height: 30px;
+    left: 25px;
+}
+
+.picon {
+    z-index: 2;
+}
+
+/// CHAT - "TURN" HEADER
+
+.battle-history {
+    font-family: $font-stack-main;
+    letter-spacing: $font-spacing-main;
+    padding-top: 2px;
+    + h2.battle-history {
+        border: 0px;
+    }
+    + .battle-history small::before {
+        content: "⇾ " ;
+        font-weight: bold;
+    }
+    small:hover {
+        color: $color-highlight-main;
+        letter-spacing: $font-spacing-main;
+    }
+}
+
+.spacer.battle-history {
+    border-top: 2px solid rgba(171, 183, 183, 0.2);
+    + .battle-history small::before {
+        content: "☀ ";
+        font-weight: bold;
+        color: #5264bd; 
+    }
+    + .battle-history small {
+        font-weight: bold;
+        color: #5264bd;
+    }
+    + h2.battle-history::before {
+        content: "⇌ ";
+        opacity: 0.2;
+    }
+}
+
+h2.battle-history {
+    font-family: $font-stack-main; 
+    border-bottom: none;
+    padding: 10px;
+    margin-top: -7px;
+    margin-bottom: -8px;
+        + .chat { /// ADDS SPACING BELOW THE "TURN" TEXT AND THE FIRST LINE OF ANYTHING ELSE IMMEDIATELY AFTER
+            margin-top: 15px;
+        }
+        + .spacer.battle-history {
+            border: 0px;
+        }
+        + .chat.message-error {
+            margin-top: 15px; 
+        }
+
+}
+
+/// MOVE BUTTONS / PP / TYPING TEXT
+.movemenu {
+    font-family: $font-stack-main; 
+    letter-spacing: $font-spacing-main;
+    
+    button {
+        font-family: $font-stack-main; 
+        letter-spacing: $font-spacing-main;  
+    }
+
+    label { /// DYNAMAX TEXT
+        font-family: $font-stack-main; 
+        letter-spacing: 2px;
+        font-weight: $font-semibld-weight;
+        color: $grey;
+        text-transform: $font-small-style;
+        margin-top: -10px;
+        padding-bottom: 0.7%;
+    }
+    
+    label:hover { /// DYNAMAX TEXT HOVER
+        font-family: $font-stack-main;
+        letter-spacing: 2px;
+        color: $white;
+        text-transform: $font-small-style;
+        background: -webkit-linear-gradient(#777, #fb4864);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;    
+        border-color: #fb4864;
+        padding-bottom: 0.7%;
+    }
+
+    button:disabled small { // UNUNSABLE MOVE/BUTTON VIA DEATH OR CHOICE
+        font-family: $font-stack-main;
+        letter-spacing: $font-spacing-main;
+        font-size: $font-small-size;
+        text-transform: $font-small-style;
+        font-weight: $font-normal-weight;   
+     }
+}
+
+.statbar {
+    letter-spacing: $font-spacing-main;
+    color: $white;
+    
+    strong { /// CHANGE POKEMON LV
+        letter-spacing: $font-spacing-main;
+        color: $white;
+        font-weight: $font-normal-weight;
+        text-shadow: 0px 0px 4px rgba(0,0,0, 1);
+    }
+
+    strong small { /// CHANGES POKEMON LV
+        letter-spacing: $font-spacing-main;
+        font-weight: $font-thin-weight;
+    }
+
+    .hpbar .hptext {
+        letter-spacing: $font-spacing-main;
+        font-weight: $font-semibld-weight;
+    }
+}
+
+/// CHANGES BATTLE BACKGROUND
+.backdrop:after {
+        content: url(http://pedrojmiranda.com/img2/rotate.php);
+}
+
+.battle { 
+    border: 0;
+}
+
+.tabbar a.button i.text+span {
+    margin-right: 2px;
+    margin-left: 8px;
+}
+
+.turn {
+    font-weight: $font-semibld-weight;
+}
+
+.weather em { 
+	font-size: 14px;
+}
+
+abbr[title] {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.chat.message-error {
+    color: #bd5252;
+
+    &:nth-child(odd) {
+        font-weight: bold;
+    }
+    &::before {
+        content: "⧗  ";	
+        color: #bd5252;
+    }
+
+}
